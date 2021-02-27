@@ -1,20 +1,28 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
 
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+`
 const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin-bottom: 5vh;
+  height: 30vh;
   padding: 5px;
+  background-image: linear-gradient(white, rgba(148, 184, 219, 0.3s));
 `
-const Text = styled.div`
+const HomeBanner = styled.div`
   width: 100%;
-  min-height: 8vh;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,17 +30,16 @@ const Text = styled.div`
   letter-spacing: 1px;
   color: black;
   padding: 10px;
-  background: rgba(255,255,255,.6);
-  border-bottom: 3px solid #cfe0ee;
+  background: white;
 `
 const HomeButton = styled(props => <Link {...props} />)`
-  background: #F0F5FA;
+  background: #14293d;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 600;
-  color: black;
+  color: white;
   padding: 20px;
   border-radius: 6px;
   border: 3px solid #cfe0ee;
@@ -43,12 +50,12 @@ const HomeButton = styled(props => <Link {...props} />)`
   }
   :hover {
     text-decoration: none;
-    color: white;
-    background: #94B8DB;
-    border: 4px solid #14293D;
+    background: white;
+    color: #14293d;
+    border: 4px solid #14293d;
   }
 `
-const BackgroundSection = ({ className }) => {
+const IndexPage = ({ className }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -64,35 +71,24 @@ const BackgroundSection = ({ className }) => {
   )
 
   const imageData = data.desktop.childImageSharp.fluid
-
   return (
-    <BackgroundImage
-      Tag="section"
-      className={className}
-      fluid={imageData}
-    >
-      <Text>
-        Welcome to the Cobblestone Property Owners Association website
-      </Text>
+    <>
+      <HomeBanner>
+        Welcome to the Cobblestone Property Owner's Association website
+      </HomeBanner>
+      <ImageWrapper>
+        <Img
+          fluid={imageData}
+          alt=""
+          style={{ width: "98%", height: "100%", border: "3px solid #cfe0ee" }}
+        />
+      </ImageWrapper>
       <ButtonWrapper>
-        <HomeButton to="covenants" >Covenants & Bylaws</HomeButton>
-        <HomeButton to="contact-us" >Contact Us</HomeButton>
+        <HomeButton to="covenants">Covenants & Bylaws</HomeButton>
+        <HomeButton to="contact-us">Contact Us</HomeButton>
       </ButtonWrapper>
-     
-    </BackgroundImage>
+    </>
   )
 }
-
-const IndexPage = styled(BackgroundSection)`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;
-`
 
 export default IndexPage

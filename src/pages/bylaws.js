@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/MainLayout"
 import styled from "styled-components"
-import { BsSearch } from "react-icons/bs"
-import { NoResults } from '../components/NoResults'
+import { NoResults } from "../components/NoResults"
+import SearchBar from "../components/SearchBar"
 
 const Heading = styled.h3`
   color: white;
@@ -24,42 +24,27 @@ const SectionHeading = styled.h5`
   letter-spacing: 1px;
   margin: 5px;
 `
-const SectionWrapper = styled.div``
 const SectionText = styled.p`
   text-indent: 3em;
   margin-top: 10px;
   margin-bottom: 15px;
 `
+const SectionWrapper = styled.div``
 
-const SearchBar = styled.input`
-padding-left: 10px;
-margin: 10px;
-  :focus {
-    outline: none;
-  }
-`
-const SearchBarWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-const renderBylawComponent = article => (
-  <>
-    {article.isVisible && (
-      <>
-        <Heading>{article.title}</Heading>
-        <Body>{article.body}</Body>
-        {article.sections &&
-          article.sections.map(section => (
-            <SectionWrapper>
-              <SectionHeading>{section.heading}</SectionHeading>
-              <SectionText>{section.text}</SectionText>
-            </SectionWrapper>
-          ))}
-      </>
-    )}
-  </>
-)
+const renderBylawComponent = article =>
+  article.isVisible && (
+    <>
+      <Heading>{article.title}</Heading>
+      <Body>{article.body}</Body>
+      {article.sections &&
+        article.sections.map(section => (
+          <SectionWrapper>
+            <SectionHeading>{section.heading}</SectionHeading>
+            <SectionText>{section.text}</SectionText>
+          </SectionWrapper>
+        ))}
+    </>
+  )
 const Content = styled.div`
   padding: 5%;
 `
@@ -86,16 +71,14 @@ const Bylaws = () => {
   const BylawsArray = siteData.site.siteMetadata.strings[0].bylaws
   const [searchText, updateSearchText] = useState("")
   const [isNoResults, updateIsNoResults] = useState(false)
-  const [bylawState, updateBylawState] = useState(BylawsArray)
 
   const handleOnChange = e => {
-
     updateSearchText(e.target.value)
 
     const sanitizedText = searchText.toLowerCase()
     let isNoResults = true
 
-    bylawState.forEach(entry => {
+    BylawsArray.forEach(entry => {
       if (!searchText) {
         entry.isVisible = true
         isNoResults = false
@@ -111,18 +94,14 @@ const Bylaws = () => {
 
   return (
     <Layout>
-      <SearchBarWrapper>
-        <BsSearch />
-        <SearchBar
-          type="text"
-          value={searchText}
-          onChange={handleOnChange}
-          placeholder="Search Bylaws"
-        />
-      </SearchBarWrapper>
+      <SearchBar
+        placeHolderText={"Search Bylaws"}
+        searchText={searchText}
+        handleOnChange={handleOnChange}
+      />
       <Content>
-        {bylawState.map(article => renderBylawComponent(article))}
-        {isNoResults && <NoResults/>}
+        {BylawsArray.map(article => renderBylawComponent(article))}
+        {isNoResults && <NoResults />}
       </Content>
     </Layout>
   )

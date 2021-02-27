@@ -1,12 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/MainLayout"
+import SearchBar from "../components/SearchBar"
+import { NoResults } from "../components/NoResults"
 import styled from "styled-components"
 
-const ArticleHeading = styled.h3`
+const CovenantHeading = styled.h3`
   color: white;
   letter-spacing: 1px;
-  background: #14293D;
+  background: #14293d;
   padding: 5px;
   border-radius: 4px;
 `
@@ -15,16 +17,29 @@ const SectionBody = styled.div`
   margin-bottom: 20px;
   text-indent: 2em;
 `
-const SectionHeading = styled.h5``
-const ArticleSection = ({ text, sectionHeading }) => (
-  <>
-    <SectionHeading>{sectionHeading}</SectionHeading>
-    {text}
-  </>
-)
+const SubsectionText = styled.div``
 const Content = styled.div`
-padding: 5%;
+  padding: 5%;
+  min-height: 80vh;
 `
+const renderCovenantComponent = (covenant, index) => {
+  console.log(covenant)
+  return (
+    covenant.isVisible && (
+      <>
+        <CovenantHeading key={index}>{covenant.sectionTitle}</CovenantHeading>
+        {covenant.sectionBody && (
+          <SectionBody key={index}>{covenant.sectionBody}</SectionBody>
+        )}
+        {covenant.subsection &&
+          covenant.subsection.map(section => (
+            <SubsectionText key={index}>{section.text}</SubsectionText>
+          ))}
+      </>
+    )
+  )
+}
+
 const Covenants = () => {
   const siteData = useStaticQuery(graphql`
     query {
@@ -37,6 +52,7 @@ const Covenants = () => {
               subsection {
                 text
               }
+              isVisible
             }
           }
         }
@@ -44,21 +60,42 @@ const Covenants = () => {
     }
   `)
   const CovenantsArray = siteData.site.siteMetadata.strings[0].covenants
+  const [searchText, updateSearchText] = useState("")
+  const [isNoResults, updateIsNoResults] = useState(false)
+
+  const handleOnChange = e => {
+    updateSearchText(e.target.value)
+    const sanitizedText = searchText.toLowerCase()
+    let isNoResults = true
+
+    CovenantsArray.forEach(entry => {
+      if (!searchText) {
+        entry.isVisible = true
+        isNoResults = false
+      } else {
+        entry.isVisible = entry.sectionTitle
+          .toLowerCase()
+          .includes(sanitizedText)
+        if (isNoResults) {
+          isNoResults = !entry.isVisible
+        }
+      }
+    })
+    updateIsNoResults(isNoResults)
+  }
+
   return (
     <Layout>
+      <SearchBar
+        placeHolderText={"Search Covenants"}
+        searchText={searchText}
+        handleOnChange={handleOnChange}
+      />
       <Content>
-        {CovenantsArray.map(covenant => (
-          <>
-            <ArticleHeading>{covenant.sectionTitle}</ArticleHeading>
-            {covenant.sectionBody && (
-              <SectionBody>{covenant.sectionBody}</SectionBody>
-            )}
-            {covenant.subsection &&
-              covenant.subsection.map(section => (
-                <ArticleSection text={section.text} />
-              ))}
-          </>
-        ))}
+        {CovenantsArray.map((covenant, index) =>
+          renderCovenantComponent(covenant, index)
+        )}
+        {isNoResults && <NoResults />}
       </Content>
     </Layout>
   )

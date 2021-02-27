@@ -1,18 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { BsArrowLeft } from 'react-icons/bs'
+import { BsArrowLeft } from "react-icons/bs"
 
 const NavTab = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  height: 8vh;
-  border-bottom: 5px solid #14293D;
+  height: 10vh;
+  border-bottom: 5px solid #14293d;
 `
 const Tab = styled(props => (
-  <Link {...props} activeStyle={{ background: "#14293D", color: 'white' }} />
+  <Link {...props} activeStyle={{ background: "#14293D", color: "white" }} />
 ))`
   display: flex;
   justify-content: center;
@@ -33,34 +33,35 @@ const Tab = styled(props => (
   }
 `
 const BackButton = styled(props => <Link {...props} />)`
-display: inline;
-align-items: center;
-justify-content: center;
-position: absolute;
-left: 0;
-color: white;
-width: 50px;
-height: 20px; 
-padding: 4%;
-a {
-  text-decoration: none;
-}
-:hover {
-  cursor: pointer;
-}
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  color: white;
+  width: 50px;
+  height: 20px;
+  padding-left: 2%;
+  padding-top: 1%;
+  a {
+    text-decoration: none;
+  }
+  :hover {
+    cursor: pointer;
+  }
 `
 const Footer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 10vh;
-background: #14293D;
-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: #14293d;
+  color: white;
 `
 const Layout = ({ children }) => (
   <>
     <BackButton to="/">
-      <BsArrowLeft style={{ color: '#14293D' }} size={18} />
+      <BsArrowLeft style={{ color: "#14293D" }} size={18} />
     </BackButton>
     <NavTab>
       <Tab to="/covenants">Covenants</Tab>
