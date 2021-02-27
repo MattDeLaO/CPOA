@@ -31,16 +31,16 @@ const SectionText = styled.p`
 `
 const SectionWrapper = styled.div``
 
-const renderBylawComponent = article =>
+const renderBylawComponent = (article, index) =>
   article.isVisible && (
     <>
-      <Heading>{article.title}</Heading>
-      <Body>{article.body}</Body>
+      <Heading key={index}>{article.title}</Heading>
+      <Body key={index}>{article.body}</Body>
       {article.sections &&
         article.sections.map(section => (
-          <SectionWrapper>
-            <SectionHeading>{section.heading}</SectionHeading>
-            <SectionText>{section.text}</SectionText>
+          <SectionWrapper key={index}>
+            <SectionHeading key={index}>{section.heading}</SectionHeading>
+            <SectionText key={index}>{section.text}</SectionText>
           </SectionWrapper>
         ))}
     </>
@@ -100,7 +100,9 @@ const Bylaws = () => {
         handleOnChange={handleOnChange}
       />
       <Content>
-        {BylawsArray.map(article => renderBylawComponent(article))}
+        {BylawsArray.map((article, index) =>
+          renderBylawComponent(article, index)
+        )}
         {isNoResults && <NoResults />}
       </Content>
     </Layout>

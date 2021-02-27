@@ -22,23 +22,19 @@ const Content = styled.div`
   padding: 5%;
   min-height: 80vh;
 `
-const renderCovenantComponent = (covenant, index) => {
-  console.log(covenant)
-  return (
-    covenant.isVisible && (
-      <>
-        <CovenantHeading key={index}>{covenant.sectionTitle}</CovenantHeading>
-        {covenant.sectionBody && (
-          <SectionBody key={index}>{covenant.sectionBody}</SectionBody>
-        )}
-        {covenant.subsection &&
-          covenant.subsection.map(section => (
-            <SubsectionText key={index}>{section.text}</SubsectionText>
-          ))}
-      </>
-    )
+const renderCovenantComponent = (covenant, index) =>
+  covenant.isVisible && (
+    <>
+      <CovenantHeading key={index}>{covenant.sectionTitle}</CovenantHeading>
+      {covenant.sectionBody && (
+        <SectionBody key={index}>{covenant.sectionBody}</SectionBody>
+      )}
+      {covenant.subsection &&
+        covenant.subsection.map(section => (
+          <SubsectionText key={index}>{section.text}</SubsectionText>
+        ))}
+    </>
   )
-}
 
 const Covenants = () => {
   const siteData = useStaticQuery(graphql`
