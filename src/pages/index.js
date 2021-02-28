@@ -1,37 +1,25 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60vh;
-`
-const ButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 30vh;
-  padding: 5px;
-  background-image: linear-gradient(white, rgba(148, 184, 219, 0.3s));
-`
 const HomeBanner = styled.div`
   width: 100%;
   min-height: 10vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  letter-spacing: 1px;
-  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
   padding: 10px;
-  background: white;
+  background: #14293d;
+  color: white;
+  border-bottom: 3px solid #cfe0ee;
 `
+
 const HomeButton = styled(props => <Link {...props} />)`
   background: #14293d;
   text-decoration: none;
@@ -55,7 +43,18 @@ const HomeButton = styled(props => <Link {...props} />)`
     border: 4px solid #14293d;
   }
 `
-const IndexPage = ({ className }) => {
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30vh;
+  padding: 5px;
+`
+
+const BackgroundSection = ({ className }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -70,25 +69,38 @@ const IndexPage = ({ className }) => {
     `
   )
 
+  // Set ImageData.
   const imageData = data.desktop.childImageSharp.fluid
+
   return (
-    <>
+    <BackgroundImage
+      Tag="section"
+      className={className}
+      fluid={imageData}
+      backgroundColor={`#040e18`}
+    >
       <HomeBanner>
-        Welcome to the Cobblestone Property Owner's Association website
+        <h3>Cobblestone POA</h3>
+        <>Fayetteville, Arkansas</>
       </HomeBanner>
-      <ImageWrapper>
-        <Img
-          fluid={imageData}
-          alt=""
-          style={{ width: "98%", height: "100%", border: "3px solid #cfe0ee" }}
-        />
-      </ImageWrapper>
       <ButtonWrapper>
         <HomeButton to="covenants">Covenants & Bylaws</HomeButton>
         <HomeButton to="contact-us">Contact Us</HomeButton>
       </ButtonWrapper>
-    </>
+    </BackgroundImage>
   )
 }
 
-export default IndexPage
+const StyledBackgroundSection = styled(BackgroundSection)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;
+`
+
+export default StyledBackgroundSection

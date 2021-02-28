@@ -33,16 +33,14 @@ const Tab = styled(props => (
   }
 `
 const BackButton = styled(props => <Link {...props} />)`
-  display: inline;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   left: 0;
   color: white;
-  width: 50px;
-  height: 20px;
-  padding-left: 2%;
-  padding-top: 1%;
+  width: 10vw;
+  height: 9vh;
   a {
     text-decoration: none;
   }
@@ -61,7 +59,7 @@ const Footer = styled.div`
 const Layout = ({ children }) => (
   <>
     <BackButton to="/">
-      <BsArrowLeft style={{ color: "#14293D" }} size={18} />
+      <BsArrowLeft style={{ color: "#14293D" }} size={20} />
     </BackButton>
     <NavTab>
       <Tab to="/covenants">Covenants</Tab>
