@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { BsArrowLeft } from "react-icons/bs"
+import {Copyright} from '../components/Copyright'
 
 const NavTab = styled.div`
   display: flex;
@@ -48,11 +49,21 @@ const BackButton = styled(props => <Link {...props} />)`
     cursor: pointer;
   }
 `
-const Footer = styled.div`
+const ContactUs = styled(props => <Link {...props} />)`
+text-decoration: none;
+color: white;
+hover: {
+  cursor: pointer;
+}
+`
+const Footer = styled.footer`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  text-align: center;
+  min-height: 10vh;
+  width: 100%;
   background: #14293d;
   color: white;
 `
@@ -66,7 +77,10 @@ const Layout = ({ children }) => (
       <Tab to="/bylaws">Bylaws</Tab>
     </NavTab>
     {children}
-    <Footer>Contact Us</Footer>
+    <Footer>
+      <ContactUs to="/contact-us">Contact Us</ContactUs>
+      <Copyright />
+    </Footer>
   </>
 )
 

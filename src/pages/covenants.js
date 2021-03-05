@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/MainLayout"
 import SearchBar from "../components/SearchBar"
@@ -17,24 +17,19 @@ const SectionBody = styled.div`
   margin-bottom: 20px;
   text-indent: 2em;
 `
-const SubsectionText = styled.div``
+const SubsectionText = styled.div`
+padding-left: 2%;
+padding-right: 2%;
+text-indent: 3em;
+margin: 10px;
+:first-letter {
+  font-weight: bold;
+}
+`
 const Content = styled.div`
   padding: 5%;
   min-height: 80vh;
 `
-const renderCovenantComponent = (covenant, index) =>
-  covenant.isVisible && (
-    <>
-      <CovenantHeading key={index}>{covenant.sectionTitle}</CovenantHeading>
-      {covenant.sectionBody && (
-        <SectionBody key={index}>{covenant.sectionBody}</SectionBody>
-      )}
-      {covenant.subsection &&
-        covenant.subsection.map(section => (
-          <SubsectionText key={index}>{section.text}</SubsectionText>
-        ))}
-    </>
-  )
 
 const Covenants = () => {
   const siteData = useStaticQuery(graphql`
@@ -55,42 +50,47 @@ const Covenants = () => {
       }
     }
   `)
-  const CovenantsArray = siteData.site.siteMetadata.strings[0].covenants
-  const [searchText, updateSearchText] = useState("")
+  const Covenants = siteData.site.siteMetadata.strings[0].covenants
+  const [searchTerm, setSearchTerm] = useState("")
+  const [searchResults, setSearchResults] = useState([])
   const [isNoResults, updateIsNoResults] = useState(false)
 
-  const handleOnChange = e => {
-    updateSearchText(e.target.value)
-    const sanitizedText = searchText.toLowerCase()
-    let isNoResults = true
-
-    CovenantsArray.forEach(entry => {
-      if (!searchText) {
-        entry.isVisible = true
-        isNoResults = false
-      } else {
-        entry.isVisible = entry.sectionTitle
-          .toLowerCase()
-          .includes(sanitizedText)
-        if (isNoResults) {
-          isNoResults = !entry.isVisible
-        }
-      }
-    })
-    updateIsNoResults(isNoResults)
+  const handleChange = event => {
+    setSearchTerm(event.target.value)
   }
+  useEffect(() => {
+    const results = Covenants.filter(covenant =>
+      covenant.sectionTitle.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    setSearchResults(results)
+  }, [searchTerm])
 
   return (
     <Layout>
       <SearchBar
         placeHolderText={"Search Covenants"}
-        searchText={searchText}
-        handleOnChange={handleOnChange}
+        value={setSearchTerm}
+        handleOnChange={handleChange}
       />
       <Content>
-        {CovenantsArray.map((covenant, index) =>
-          renderCovenantComponent(covenant, index)
-        )}
+        {searchResults.map(covenant => (
+          <>
+            <CovenantHeading key={`${covenant.sectionTitle} + sectionTitle`}>
+              {covenant.sectionTitle}
+            </CovenantHeading>
+            {covenant.sectionBody && (
+              <SectionBody key={`${covenant.sectionBody} + sectionBody`}>
+                {covenant.sectionBody}
+              </SectionBody>
+            )}
+            {covenant.subsection &&
+              covenant.subsection.map(section => (
+                <SubsectionText key={section.text}>
+                  {section.text}
+                </SubsectionText>
+              ))}
+          </>
+        ))}
         {isNoResults && <NoResults />}
       </Content>
     </Layout>

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/MainLayout"
 import styled from "styled-components"
@@ -31,22 +31,9 @@ const SectionText = styled.p`
 `
 const SectionWrapper = styled.div``
 
-const renderBylawComponent = (article, index) =>
-  article.isVisible && (
-    <>
-      <Heading key={index}>{article.title}</Heading>
-      <Body key={index}>{article.body}</Body>
-      {article.sections &&
-        article.sections.map(section => (
-          <SectionWrapper key={index}>
-            <SectionHeading key={index}>{section.heading}</SectionHeading>
-            <SectionText key={index}>{section.text}</SectionText>
-          </SectionWrapper>
-        ))}
-    </>
-  )
 const Content = styled.div`
   padding: 5%;
+  min-height: 76vh;
 `
 const Bylaws = () => {
   const siteData = useStaticQuery(graphql`
@@ -68,42 +55,47 @@ const Bylaws = () => {
       }
     }
   `)
-  const BylawsArray = siteData.site.siteMetadata.strings[0].bylaws
-  const [searchText, updateSearchText] = useState("")
-  const [isNoResults, updateIsNoResults] = useState(false)
-
-  const handleOnChange = e => {
-    updateSearchText(e.target.value)
-
-    const sanitizedText = searchText.toLowerCase()
-    let isNoResults = true
-
-    BylawsArray.forEach(entry => {
-      if (!searchText) {
-        entry.isVisible = true
-        isNoResults = false
-      } else {
-        entry.isVisible = entry.title.toLowerCase().includes(sanitizedText)
-        if (isNoResults) {
-          isNoResults = !entry.isVisible
-        }
-      }
-    })
-    updateIsNoResults(isNoResults)
+  const bylaws = siteData.site.siteMetadata.strings[0].bylaws
+  const [searchTerm, setSearchTerm] = useState("")
+  const [searchResults, setSearchResults] = useState([])
+  const handleChange = event => {
+    setSearchTerm(event.target.value)
   }
+  useEffect(() => {
+    const results = bylaws.filter(bylaw =>
+      bylaw.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    setSearchResults(results)
+  }, [searchTerm])
 
   return (
     <Layout>
       <SearchBar
         placeHolderText={"Search Bylaws"}
-        searchText={searchText}
-        handleOnChange={handleOnChange}
+        value={searchTerm}
+        handleOnChange={handleChange}
       />
       <Content>
-        {BylawsArray.map((article, index) =>
-          renderBylawComponent(article, index)
-        )}
-        {isNoResults && <NoResults />}
+        {searchResults.map(bylaw => (
+          <>
+            <Heading key={`${bylaw.title} + bylaw title`}>
+              {bylaw.title}
+            </Heading>
+            <Body key={`${bylaw.title} + bylaw body`}>{bylaw.body}</Body>
+            {bylaw.sections &&
+              bylaw.sections.map(section => (
+                <SectionWrapper key={`${section.heading} + section wrapper`}>
+                  <SectionHeading key={`${section.heading} + section heading`}>
+                    {section.heading}
+                  </SectionHeading>
+                  <SectionText key={`${section.heading} + section text`}>
+                    {section.text}
+                  </SectionText>
+                </SectionWrapper>
+              ))}
+          </>
+        ))}
+        {!searchResults && <NoResults />}
       </Content>
     </Layout>
   )
