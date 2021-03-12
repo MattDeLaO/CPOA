@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Cobblestone Property Owner's Association`,
     strings: [
       {
         bylaws: [
@@ -318,13 +318,24 @@ module.exports = {
             isVisible: true,
           },
           {
-            sectionTitle: "4",
-            sectionBody: `some sort of text`,
+            sectionTitle: "4. BUILDING LOCATION AND YARD RESTRICTIONS:",
+            sectionBody: `DISTRICT RSF-4 ZONING - No building may be located within Fifteen (15) feet of any Lot line which is adjacent to a street, within Five (5) feet of the side Lot lines, or within Fifteen (15) feet of the rear Lot line. If two adjacent Lots are purchased for the purpose of constructing only one home, the interior side yard line limitations are removed.
+            
+            No Lots within the subdivision may be subdivided, except as follows: if owners on both sides of a vacant joining Lot elect to purchase said Lot, they may subdivide only one time. This Lot split of the joining Lot then increases the size of both adjacent Lots and for building purposes the interior side Lot line limitation would be associated with and measured from the new property line created by the division. If both portions of the split Lot were ever recombined for purposes of serving as a building Lot, then the original restriction as to set back would apply.
+            
+            The front yard, the side yards and the backyard shall be fully grass sodded within sixty (60) days and ninety (90) days, respectfully, following the date on which the dwelling is eligible for the issuance by the City of Fayetteville of a temporary certificate of occupancy. Any variance must be submitted and approved by the Grounds Committee. All front yards shall be maintained and groomed as required to be consistent with the other homes within the subdivision and to comply with the overall architectural objectives of the Cobblestone Subdivision Phase IV`,
             isVisible: true,
           },
           {
-            sectionTitle: "5",
-            sectionBody: `some sort of text`,
+            sectionTitle: "5. BUILDERS AND CONTRACTORS:",
+            sectionBody: `Prior to commencement of any site work or construction, a Lot owner shall submit the name, address, and telephone number of the Lot owner; the name, address, and telephone number of the building contractor; a complete set of construction plans including exterior colors and finishes; and a plat plan reflecting the location or all improvements, and set back lines, collectively referred to as "Building Packet" to the Architectural Committee for review and approval. Within thirty(30) days after receipt of the Building packet the Architectural Committee shall act upon the request and provide the Lot owner approval or disapproval in writing. A building contractor is defined as a a general contractor, building contractor, construction contractor or consultant, architect, design builder or the owner, if it/he/she acts as their own contractor.
+            
+            If the Building Packet is complete and the Architectural Committee fails to respond to a Lot owner within the specified time period, said member may approach the Board of Directors of Cobblestone Subdivision Property Owner's Association and request immediate action be taken to approve or disapprove the owner's submission. The Board of Directors shall have the authority to approve or disapprove the submission; however, must act within fifteen (15) working days of receipt of the owner's written request.
+
+            If both the Architectural Committee and the Board of Directors fail to act, if no suit to halt the proposed construction is commenced prior to completion of said construction, and if said construction is in compliance with the ordinances of the City of Fayetteville, Arkansas, written approval from the Architectural Committee shall no longer be required and the completed construction shall be deemed in compliance with the Cobblestone Subdivision phase IV conditions, covenants, and restrictions.
+
+            No building materials shall be placed or stored on a Lot prior to approval of the Building Packet and the scheduled date on which construction is to commence. Construction sites shall be kept neat and orderly. Construction sites are to be cleaned daily of trash and scrap material. Trash shall be contained on the construction site and disposed of properly. One fifty (50) cubic feet trash container (minimum size) shall be located on the building site. If said requirements are not adhered to, Cobblestone Subdivision Property Owner's Associated may hire a cleanup crew to perform the associated cleanup of a construction site, said expense shall be deemed a lien upon the lot until paid. Portable toilets, one (1) for every three (3) residential Lots, must be on all job sites during construction. Upon completion of the building project all remaining materials, trash, dumpsters, toilets, etc. shall be removed from the lot and subdivision within ten (10) days. No storage of trash, brick, concrete, will be allowed on any Lot within the subdivision.
+            `,
             isVisible: true,
           },
           {

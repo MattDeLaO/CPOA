@@ -18,13 +18,13 @@ const SectionBody = styled.div`
   text-indent: 2em;
 `
 const SubsectionText = styled.div`
-padding-left: 2%;
-padding-right: 2%;
-text-indent: 3em;
-margin: 10px;
-:first-letter {
-  font-weight: bold;
-}
+  padding-left: 2%;
+  padding-right: 2%;
+  text-indent: 3em;
+  margin: 10px;
+  :first-letter {
+    font-weight: bold;
+  }
 `
 const Content = styled.div`
   padding: 5%;
@@ -71,6 +71,7 @@ const Covenants = () => {
         placeHolderText={"Search Covenants"}
         value={setSearchTerm}
         handleOnChange={handleChange}
+        id="Top"
       />
       <Content>
         {searchResults.map(covenant => (

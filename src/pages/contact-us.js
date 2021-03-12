@@ -1,28 +1,30 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
+import { BsArrowLeft } from "react-icons/bs"
 
 const SubmitButton = styled.button`
-background: #14293d;
-text-decoration: none;
-text-align: center;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-font-weight: 600;
-color: white;
-padding: 20px;
-border-radius: 6px;
-border: 3px solid #cfe0ee;
-margin: 12px;
-min-width: 250px;
-:active {
+  background: #14293d;
   text-decoration: none;
-}
-:hover {
-  text-decoration: none;
-  background: white;
-  color: #14293d;
-  border: 4px solid #14293d;
-}
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  border: 3px solid #cfe0ee;
+  margin: 12px;
+  min-width: 250px;
+  :active {
+    text-decoration: none;
+  }
+  :hover {
+    text-decoration: none;
+    background: white;
+    color: #14293d;
+    border: 4px solid #14293d;
+  }
 `
 const StyledInput = styled.input`
   background: #f9f9f9;
@@ -32,7 +34,7 @@ const StyledInput = styled.input`
   justify-content: center;
   align-items: center;
   padding: 5px;
-  background: #F4F6F6;
+  background: #f4f6f6;
   :focus {
     background: white;
   }
@@ -70,7 +72,7 @@ const MessageWrapper = styled.div`
     padding: 10px;
     margin: 4px;
     height: 20vh;
-    background: #F4F6F6;
+    background: #f4f6f6;
     :focus {
       background: white;
     }
@@ -141,6 +143,47 @@ const Content = styled.div`
   padding: 5%;
   min-height: 80vh;
 `
+
+const SuccessMessage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  color: white;
+  text-align: center;
+  background: #80d06e;
+  border: 2px solid #4f8f00;
+  border-radius: 4px;
+`
+const ErrorMessage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  color: white;
+  text-align: center;
+  background: #df5959;
+  border: 2px solid #ab2121;
+  border-radius: 4px;
+`
+const BackButton = styled(props => <Link {...props} />)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  color: white;
+  width: 10vw;
+  height: 9vh;
+  a {
+    text-decoration: none;
+  }
+  :hover {
+    cursor: pointer;
+  }
+`
 export default class MyForm extends React.Component {
   constructor(props) {
     super(props)
@@ -154,7 +197,12 @@ export default class MyForm extends React.Component {
     const { status } = this.state
     return (
       <>
-        <Header>Contact Us</Header>
+        <Header>
+          <BackButton to="/">
+            <BsArrowLeft size={20} />
+          </BackButton>
+          Contact Us
+        </Header>
         <Content>
           <StyledForm
             onSubmit={this.submitForm}
@@ -184,14 +232,18 @@ export default class MyForm extends React.Component {
             <Feedback>
               <>
                 {status === "SUCCESS" ? (
-                  <p>
-                    Thanks for reaching out! We will respond as soon as possible
-                  </p>
+                  <SuccessMessage>
+                    Thanks for reaching out! We will respond as soon as
+                    possible.
+                  </SuccessMessage>
                 ) : (
                   <SubmitButton>Submit</SubmitButton>
                 )}
                 {status === "ERROR" && (
-                  <p>Ooops! There was an error submitting your contact form. Please try again later</p>
+                  <ErrorMessage>
+                    Ooops! There was an error submitting your contact form.
+                    Please try again later
+                  </ErrorMessage>
                 )}
               </>
             </Feedback>

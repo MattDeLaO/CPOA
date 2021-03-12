@@ -2,8 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
+import { motion } from "framer-motion"
 
-const HomeBanner = styled.div`
+const HomeBanner = styled(motion.div)`
   width: 100%;
   min-height: 10vh;
   display: flex;
@@ -44,7 +45,7 @@ const HomeButton = styled(props => <Link {...props} />)`
   }
 `
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,11 +80,19 @@ const BackgroundSection = ({ className }) => {
       fluid={imageData}
       backgroundColor={`#040e18`}
     >
-      <HomeBanner>
+      <HomeBanner
+        animate={{ y: 0 }}
+        initial={{ y: "-100%" }}
+        transition={{ duration: 0.9 }}
+      >
         <h3>Cobblestone POA</h3>
         <>Fayetteville, Arkansas</>
       </HomeBanner>
-      <ButtonWrapper>
+      <ButtonWrapper
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
         <HomeButton to="covenants">Covenants & Bylaws</HomeButton>
         <HomeButton to="contact-us">Contact Us</HomeButton>
       </ButtonWrapper>

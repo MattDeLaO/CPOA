@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { BsArrowLeft } from "react-icons/bs"
-import {Copyright} from '../components/Copyright'
+import { Copyright } from "../components/Copyright"
 
 const NavTab = styled.div`
   display: flex;
@@ -50,11 +50,11 @@ const BackButton = styled(props => <Link {...props} />)`
   }
 `
 const ContactUs = styled(props => <Link {...props} />)`
-text-decoration: none;
-color: white;
-hover: {
-  cursor: pointer;
-}
+  text-decoration: none;
+  color: white;
+  hover: {
+    cursor: pointer;
+  }
 `
 const Footer = styled.footer`
   display: flex;
@@ -67,6 +67,26 @@ const Footer = styled.footer`
   background: #14293d;
   color: white;
 `
+const BackToTopButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #14293d;
+  min-width: 10%;
+  border-radius: 25px;
+  padding: 8px;
+  :hover {
+    text-decoration: underline;
+  }
+`
+const BackToTopButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+`
 const Layout = ({ children }) => (
   <>
     <BackButton to="/">
@@ -77,6 +97,10 @@ const Layout = ({ children }) => (
       <Tab to="/bylaws">Bylaws</Tab>
     </NavTab>
     {children}
+    <BackToTopButtonWrapper>
+      <BackToTopButton href="#Top">Back To Top</BackToTopButton>
+    </BackToTopButtonWrapper>
+
     <Footer>
       <ContactUs to="/contact-us">Contact Us</ContactUs>
       <Copyright />

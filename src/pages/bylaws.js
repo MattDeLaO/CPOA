@@ -74,8 +74,9 @@ const Bylaws = () => {
         placeHolderText={"Search Bylaws"}
         value={searchTerm}
         handleOnChange={handleChange}
+        id="Top"
       />
-      <Content>
+      <Content >
         {searchResults.map(bylaw => (
           <>
             <Heading key={`${bylaw.title} + bylaw title`}>

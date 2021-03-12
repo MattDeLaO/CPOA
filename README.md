@@ -1,17 +1,10 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Info regarding site build:
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+In addition to the information you find at the bottom of the file regarding gatsby projects in general, it's important to note some particular design elements of this site here:
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
-
+- Rather than create a backend service for this site, I've opted to put it's static string files in the config file. This was done primarily because it's easy for me to access via graphql (it's not necessary to have them in this file but I kind of like them here);
+- Changes to the config file, for instance - to add, edit, or remove strings - will require that the site rebuilds. It should do this automatically when it is merged to the git repo because Netlify will build on a new merge.
+- The contact form is done through formspree and the account that is associated with that was provided by Margaret. It is a gmail account ( please contact her for more info regarding that account)
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
@@ -96,4 +89,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
