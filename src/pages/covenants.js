@@ -30,7 +30,19 @@ const Content = styled.div`
   padding: 5%;
   min-height: 80vh;
 `
-
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-indent: 1.5em;
+  }
+`
 const Covenants = () => {
   const siteData = useStaticQuery(graphql`
     query {
@@ -74,6 +86,18 @@ const Covenants = () => {
         id="Top"
       />
       <Content>
+        <Description>
+          <h2>KNOW ALL BY THESE PRESENTS</h2>
+          <p>
+            WHEREAS the undersigned, hereinafter referred to a "Declarant" is
+            the owner, developer and sub-divider of all the Lots in COBBLESTONE
+            SUBDIVISION, PHASE IV, a residential subdivision to the City of
+            Fayetteville, Arkansas, hereinafter to as "COBBLESTONE SUBDIVISION
+            PHASE IV", by execution hereof, enters and declares the following
+            assurances, covenants, and restrictions wih respect to the
+            Subdivision Phase IV.
+          </p>
+        </Description>
         {searchResults.map(covenant => (
           <>
             <CovenantHeading key={`${covenant.sectionTitle} + sectionTitle`}>
