@@ -272,7 +272,7 @@ module.exports = {
         covenants: [
           {
             sectionTitle: "1. OWNERSHIP:",
-            sectionBody: `Declarant is the developer of the following described real property being developed as COBBLESTONE SUBDIVISION, PHASE III. of the City of Fayetteville, County of Washington, State of Arkansas. to-wit:
+            sectionBody: `Declarant is the developer of the following described real property being developed as COBBLESTONE SUBDIVISION. of the City of Fayetteville, County of Washington, State of Arkansas. to-wit:
 
             A part of the NWl/4 of the NEI/4 of Section 32 and part of the SWI/4 of the SE1/4of Section 29 in Tl 7N, R30W in Washington County, Arkansas and being more particularly described as follows: Beginning at the NW Corner of said NWl/4, NE thence N02°53'20"E317.63 feet, thence S87°04'111'E I 19.18 feet, thence N44°19'21"E
             73.36 feet, thence S87°04'11"E 983.53 feet, thence N02°55'49"E 46.71 feet, thence S87°04'11 "E 171.15 fee thence S02°40'01"W 410.12,. thence S02°24'22''W 201.85 feet,  thence  N87°04'1 I "W  124.88  fe_e t,  thence  N79°06'00"W  50.49  feet,  thence N87°04'11 "W 599.00 feet, thence S48°41'58"W 83.48 feet, thence along a curve to the left 217.04 feet, said curve having a radius of 385.00 feet and a chord bearing N57°27'00"W 214.17 feet, thence N02°55'49"E 108.59 feet, thence N87°04'Il"W
@@ -281,16 +281,16 @@ module.exports = {
           },
           {
             sectionTitle: "2.	SINGLE-FAMILY LAND USE:",
-            sectionBody: `Lots within Cobblestone Subdivision Phase III are developed as a RSF-4 (Residential Single Family w/4 units/acre) to provide single family lots and shall be in compliance with or exceed the regulations for zoning as defined and interpreted by the City of Fayetteville, Arkansas, and Courts of competent jurisdiction, and in compliance with the assurances, covenants, restrictions, and conditions set out and contained herein, on the date these covenants and restrictions were executed.`,
+            sectionBody: `Lots within Cobblestone Subdivision are developed as a RSF-4 (Residential Single Family w/4 units/acre) to provide single family lots and shall be in compliance with or exceed the regulations for zoning as defined and interpreted by the City of Fayetteville, Arkansas, and Courts of competent jurisdiction, and in compliance with the assurances, covenants, restrictions, and conditions set out and contained herein, on the date these covenants and restrictions were executed.`,
             isVisible: true,
           },
           {
             sectionTitle: "3.	BUILDING LIMITATIONS AND REQUIREMENTS:",
-            sectionBody: `The subdivision and building codes of the City of Fayetteville, Arkansas, as such presently exist or are hereafter amended, shall be and are hereby made applicable to all lots in Cobblestone Subdivision Phase III. All dwellings, other structures and/or improvements shall comply with said ordinances as such exist on the date of such construction. Any conflicts between such ordinances and the provisions of the conditions, covenants restrictions shall be resolved in favor of the more restrictive provisions. Building, architectural, and design specifications shall be in accordance with the codes and regulations of the City of Fayetteville, Arkansas, and specifically those pertaining to development of Land zoned RSF-4 (Residential Single Family w/4 units/acre).`,
+            sectionBody: `The subdivision and building codes of the City of Fayetteville, Arkansas, as such presently exist or are hereafter amended, shall be and are hereby made applicable to all lots in Cobblestone Subdivision. All dwellings, other structures and/or improvements shall comply with said ordinances as such exist on the date of such construction. Any conflicts between such ordinances and the provisions of the conditions, covenants restrictions shall be resolved in favor of the more restrictive provisions. Building, architectural, and design specifications shall be in accordance with the codes and regulations of the City of Fayetteville, Arkansas, and specifically those pertaining to development of Land zoned RSF-4 (Residential Single Family w/4 units/acre).`,
             subsectionTitle: "Individual Homes (Single Family, RSF-4):",
             subsection: [
               {
-                text: `a)	All dwelling structures constructed upon any lot of Cobblestone Subdivision Phase ill shall contain a minimum of one thousand three hundred (1,300) square feet of heated living space.`,
+                text: `a)	All dwelling structures constructed upon any lot of Cobblestone Subdivision shall contain a minimum of one thousand three hundred (1,300) square feet of heated living space.`,
               },
               {
                 text: `b)	Each dwelling shall have a private garage for not less than two (2) vehicles. All garage interiors must be dry-walled and finished. All garage doors must be of section type, with automatic garage door openers with appropriate child safety features.`,
@@ -299,7 +299,7 @@ module.exports = {
                 text: `c)	Each dwelling is required to have a concrete driveway.`,
               },
               {
-                text: `d)	All homes and/or other structures constructed within Cobblestone Subdivision Phase III must have an architectural asphalt tile, or wood shingle roof.`,
+                text: `d)	All homes and/or other structures constructed within Cobblestone Subdivision must have an architectural asphalt tile, or wood shingle roof.`,
               },
               {
                 text:
@@ -311,7 +311,7 @@ module.exports = {
               },
               {
                 text:
-                  "g)	Variance. Any lot owner may petition the Architectural Committee for a variance from the building limitation and requirements. Each application for a variance will be considered individually based on the overall design of the proposed house in relationship to its compatibility with the other homes in Cobblestone Subdivision Phase III Subdivision. Any application for a variance shall include all documentation that supports the quality of the proposed construction that will be equal to or greater than the requirements set forth in these building limitations and requirements.",
+                  "g)	Variance. Any lot owner may petition the Architectural Committee for a variance from the building limitation and requirements. Each application for a variance will be considered individually based on the overall design of the proposed house in relationship to its compatibility with the other homes in Cobblestone Subdivision. Any application for a variance shall include all documentation that supports the quality of the proposed construction that will be equal to or greater than the requirements set forth in these building limitations and requirements.",
               },
             ],
             isVisible: true,
@@ -322,7 +322,7 @@ module.exports = {
             
             No Lots within the subdivision may be subdivided, except as follows: if owners on both sides of a vacant joining Lot elect to purchase said Lot, they may subdivide only one time. This Lot split of the joining Lot then increases the size of both adjacent Lots and for building purposes the interior side Lot line limitation would be associated with and measured from the new property line created by the division. If both portions of the split Lot were ever recombined for purposes of serving as a building Lot, then the original restriction as to set back would apply.
             
-            The front yard, the side yards and the backyard shall be fully grass sodded within sixty (60) days and ninety (90) days, respectfully, following the date on which the dwelling is eligible for the issuance by the City of Fayetteville of a temporary certificate of occupancy. Any variance must be submitted and approved by the Grounds Committee. All front yards shall be maintained and groomed as required to be consistent with the other homes within the subdivision and to comply with the overall architectural objectives of the Cobblestone Subdivision Phase IV`,
+            The front yard, the side yards and the backyard shall be fully grass sodded within sixty (60) days and ninety (90) days, respectfully, following the date on which the dwelling is eligible for the issuance by the City of Fayetteville of a temporary certificate of occupancy. Any variance must be submitted and approved by the Grounds Committee. All front yards shall be maintained and groomed as required to be consistent with the other homes within the subdivision and to comply with the overall architectural objectives of the Cobblestone Subdivision`,
             isVisible: true,
           },
           {
@@ -331,7 +331,7 @@ module.exports = {
             
             If the Building Packet is complete and the Architectural Committee fails to respond to a Lot owner within the specified time period, said member may approach the Board of Directors of Cobblestone Subdivision Property Owner's Association and request immediate action be taken to approve or disapprove the owner's submission. The Board of Directors shall have the authority to approve or disapprove the submission; however, must act within fifteen (15) working days of receipt of the owner's written request.
 
-            If both the Architectural Committee and the Board of Directors fail to act, if no suit to halt the proposed construction is commenced prior to completion of said construction, and if said construction is in compliance with the ordinances of the City of Fayetteville, Arkansas, written approval from the Architectural Committee shall no longer be required and the completed construction shall be deemed in compliance with the Cobblestone Subdivision phase IV conditions, covenants, and restrictions.
+            If both the Architectural Committee and the Board of Directors fail to act, if no suit to halt the proposed construction is commenced prior to completion of said construction, and if said construction is in compliance with the ordinances of the City of Fayetteville, Arkansas, written approval from the Architectural Committee shall no longer be required and the completed construction shall be deemed in compliance with the Cobblestone Subdivision conditions, covenants, and restrictions.
 
             No building materials shall be placed or stored on a Lot prior to approval of the Building Packet and the scheduled date on which construction is to commence. Construction sites shall be kept neat and orderly. Construction sites are to be cleaned daily of trash and scrap material. Trash shall be contained on the construction site and disposed of properly. One fifty (50) cubic feet trash container (minimum size) shall be located on the building site. If said requirements are not adhered to, Cobblestone Subdivision Property Owner's Associated may hire a cleanup crew to perform the associated cleanup of a construction site, said expense shall be deemed a lien upon the lot until paid. Portable toilets, one (1) for every three (3) residential Lots, must be on all job sites during construction. Upon completion of the building project all remaining materials, trash, dumpsters, toilets, etc. shall be removed from the lot and subdivision within ten (10) days. No storage of trash, brick, concrete, will be allowed on any Lot within the subdivision.
             `,
@@ -344,19 +344,19 @@ module.exports = {
           },
           {
             sectionTitle: "7.	FENCES:",
-            sectionBody: `Fencing of the front yard is prohibited. Fencing of rear and side yards must be of brick or wood privacy construction. Except for fencing constructed for the purpose of screening by Declarant, no fencing may exceed six (6) feet in height. All fences shall be recessed at least ten (10) feet from the front of the dwelling. No wire or chain link fencing is a1lowed. Fencing shall not infringe on neighboring lots or the common grounds of Cobblestone Subdivision Phase III. All fencing plans and materials must be submitted to and approved by the Architectural Committee.`,
+            sectionBody: `Fencing of the front yard is prohibited. Fencing of rear and side yards must be of brick or wood privacy construction. Except for fencing constructed for the purpose of screening by Declarant, no fencing may exceed six (6) feet in height. All fences shall be recessed at least ten (10) feet from the front of the dwelling. No wire or chain link fencing is a1lowed. Fencing shall not infringe on neighboring lots or the common grounds of Cobblestone Subdivision. All fencing plans and materials must be submitted to and approved by the Architectural Committee.`,
             isVisible: true,
           },
           {
             sectionTitle: "8.	SIDEWALKS, DRIVEWAYS AND STREETS:",
-            sectionBody: `A lot owner may not cut or cause to be cut a street within Cobblestone Subdivision Phase III for any reason. Concrete driveways and street access points are to be constructed and completed by the owner prior to or completion of the dwelling project. All driveways are to be of concrete base and may have a decorative type finish, example: brick lines, brick expansions, aggregate finish pattern concrete, etc. Concrete sidewalks shall be constructed at the expense of the lot owner and shall be completed at the time the driveway is constructed. Sidewalks sha11 be Five (5) feet and constructed as designed and shown on the final plat.
+            sectionBody: `A lot owner may not cut or cause to be cut a street within Cobblestone Subdivision for any reason. Concrete driveways and street access points are to be constructed and completed by the owner prior to or completion of the dwelling project. All driveways are to be of concrete base and may have a decorative type finish, example: brick lines, brick expansions, aggregate finish pattern concrete, etc. Concrete sidewalks shall be constructed at the expense of the lot owner and shall be completed at the time the driveway is constructed. Sidewalks sha11 be Five (5) feet and constructed as designed and shown on the final plat.
 
             Sidewalks shall be made of concrete with a light broom finish, expansion joints are to be cut on eight (8) foot centers. The length of sidewalks will vary with each lot; the sidewalk shall be the full street side width of the lot All handicapped ramps are the responsibility of the lot owner and must be constructed according to City specifications. Yellow truncated domes must be installed by a Contractor approved by the Developer.`,
             isVisible: true,
           },
           {
             sectionTitle: "9.	UTILITIES:",
-            sectionBody: `All utilities situated within Cobblestone Subdivision Phase III subdivision shall be underground and overhead service is not permitted. Easements for utilities are identified on the filed final plat.`,
+            sectionBody: `All utilities situated within Cobblestone Subdivision shall be underground and overhead service is not permitted. Easements for utilities are identified on the filed final plat.`,
             isVisible: true,
           },
           {
@@ -381,12 +381,12 @@ module.exports = {
           },
           {
             sectionTitle: "14. OIL AND MINING OPERATIONS:",
-            sectionBody: `No operations associated with the testing for, location. or recovery of, and refining or processing of oil. gas or minerals found upon or underneath Cobblestone Subdivision Phase III shall be permitted or located within Cobblestone Subdivision Phase III.`,
+            sectionBody: `No operations associated with the testing for, location. or recovery of, and refining or processing of oil. gas or minerals found upon or underneath Cobblestone Subdivision shall be permitted or located within Cobblestone Subdivision`,
             isVisible: true,
           },
           {
             sectionTitle: "15. LIVESTOCK, POULTRY AND PETS:",
-            sectionBody: `No livestock, poultry, exotic, wild, non-domesticated, or other such animals (except as noted within) shall be kept, raised or sheltered on any residential building lot or common area within Cobblestone Subdivision Phase III. Dogs, cats and other household pets may be kept, provided they are not raised for commercial purposes. The outside living area for approved pets must be maintained and kept clean at all times and screened from public view. All living areas for such pets must be in the rear or side yard.  The  walking  of  permitted  animals  on  a  leash is allowed provided  and owner/walker picks up any dropping from said animal. Continuously "barking dogs" are considered a nuisance and are a violation of City Ordinances and such ordinances will be adhered to.`,
+            sectionBody: `No livestock, poultry, exotic, wild, non-domesticated, or other such animals (except as noted within) shall be kept, raised or sheltered on any residential building lot or common area within Cobblestone Subdivision Dogs, cats and other household pets may be kept, provided they are not raised for commercial purposes. The outside living area for approved pets must be maintained and kept clean at all times and screened from public view. All living areas for such pets must be in the rear or side yard.  The  walking  of  permitted  animals  on  a  leash is allowed provided  and owner/walker picks up any dropping from said animal. Continuously "barking dogs" are considered a nuisance and are a violation of City Ordinances and such ordinances will be adhered to.`,
             isVisible: true,
           },
           {
@@ -435,7 +435,7 @@ module.exports = {
           },
           {
             sectionTitle: "20. SIGHT DISTANCE AT INTERSECTIONS:",
-            sectionBody: `Walls, fencing, shrubs, hedges, trees or other improvements constructed or made near or at the intersections of streets within the Cobblestone Subdivision Phase III shall be located and constructed in compliance with the codes, regulations, and ordinances of the City of Fayetteville.`,
+            sectionBody: `Walls, fencing, shrubs, hedges, trees or other improvements constructed or made near or at the intersections of streets within the Cobblestone Subdivision shall be located and constructed in compliance with the codes, regulations, and ordinances of the City of Fayetteville.`,
             isVisible: true,
           },
           {
@@ -445,7 +445,7 @@ module.exports = {
           },
           {
             sectionTitle: "22. STREETLIGHTS:",
-            sectionBody: `All streetlights shall be installed by the Cobblestone Subdivision Phase III developer and dedicated to the City of Fayetteville, Arkansas for public use and maintenance by the City and serving electric utility.`,
+            sectionBody: `All streetlights shall be installed by the Cobblestone Subdivision developer and dedicated to the City of Fayetteville, Arkansas for public use and maintenance by the City and serving electric utility.`,
             isVisible: true,
           },
           {
@@ -460,7 +460,7 @@ module.exports = {
           },
           {
             sectionTitle: "25. TREE REQUIREMENTS:",
-            sectionBody: `Each lot owner and shall be responsible for the health of all planted trees on the lot and shall be bound for the maintenance, care and monitoring for each tree planted. Each lot within Cobblestone Subdivision Phase III is required to plant and maintain two (2) 1- 1/2 to 2 inch diameter Native American trees in the front yard per City requirements before the structure is certified for occupancy. If at any time said tree is damaged significantly or dies, it must be replaced within a two-month period. A list of types of trees permitted will be provided by the Grounds Committee. Failure to replant or maintain the tree after notice by the Cobblestone Subdivision Property Owner's Association could result in an assessment and a lien upon the lot for the cost of planting and maintaining the tree.
+            sectionBody: `Each lot owner and shall be responsible for the health of all planted trees on the lot and shall be bound for the maintenance, care and monitoring for each tree planted. Each lot within Cobblestone Subdivision  is required to plant and maintain two (2) 1- 1/2 to 2 inch diameter Native American trees in the front yard per City requirements before the structure is certified for occupancy. If at any time said tree is damaged significantly or dies, it must be replaced within a two-month period. A list of types of trees permitted will be provided by the Grounds Committee. Failure to replant or maintain the tree after notice by the Cobblestone Subdivision Property Owner's Association could result in an assessment and a lien upon the lot for the cost of planting and maintaining the tree.
 
             The lot owner agrees a lien which results from a failure to pay any assessment may be foreclosed in the same manner provided by Arkansas Law for the foreclosure of a real estate mortgage.`,
             isVisible: true,
@@ -473,7 +473,7 @@ module.exports = {
           {
             sectionTitle:
               "27. ENTRYWAY, DETENTION POND AND MEDIAN MAINTENANCE AND UPKEEP:",
-            sectionBody: `Entryways, detention ponds and surrounding areas, public areas and parks, and common areas and improvements are an integral part of Cobblestone Subdivision and it is in the best interest of Cobblestone Subdivision Phase III that said such entryways, medians, retention ponds and surrounding areas, public areas and parks, and common areas and improvements be maintained at all times.
+            sectionBody: `Entryways, detention ponds and surrounding areas, public areas and parks, and common areas and improvements are an integral part of Cobblestone Subdivision and it is in the best interest of Cobblestone Subdivision that said such entryways, medians, retention ponds and surrounding areas, public areas and parks, and common areas and improvements be maintained at all times.
 
             The cost of the routine upkeep, maintenance and repair and replacement of entryways, median detention ponds and surrounding and common areas and improvements shall be shared by each lot owner through annual or special assessments. Any upkeep, maintenance and repair of public area and parks shall be at the discretion of the Board of Directors of Cobblestone Subdivision Property Owner's Association.`,
             isVisible: true,
@@ -485,7 +485,7 @@ module.exports = {
           },
           {
             sectionTitle: "29. STREETS:",
-            sectionBody: `AU streets within the Cobblestone Subdivision Phase III development shall be dedicated to the City of Fayetteville, Arkansas for public use and maintenance by the City.`,
+            sectionBody: `AU streets within the Cobblestone Subdivision development shall be dedicated to the City of Fayetteville, Arkansas for public use and maintenance by the City.`,
             isVisible: true,
           },
           {
@@ -495,21 +495,21 @@ module.exports = {
           },
           {
             sectionTitle: "31. GOVERNING STRUCTURE:",
-            sectionBody: `By accepting the deed of ownership of property within Cobblestone Subdivision Phase III, each owner accepts membership within the Cobblestone Subdivision Property Owner's Association, an Arkansas non-profit corporation, formed to promote the
+            sectionBody: `By accepting the deed of ownership of property within Cobblestone Subdivision, each owner accepts membership within the Cobblestone Subdivision Property Owner's Association, an Arkansas non-profit corporation, formed to promote the
             collective and individual property and civic interests of all owners of Cobblestone Subdivision property and to own, operate and maintain any area which is now or which in the future may be designated common property and at its discretion publicly owned property such as the park area so long as the development and maintenance of park and publicly owned areas are in compliance with City codes and regulations.
             
-            By accepting ownership of property within Cobblestone Subdivision Phase III, each owner acknowledge said property is now or will be subject to periodic assessments to be established and used for the construction development, improvement, repair and replacement of the entryways, detention ponds and surrounding areas, and common areas and improvements by the Board of Directors of the Cobblestone Subdivision Property Owner's Association and agrees if said assessments are not timely and fully paid said assessment and all costs, including legal fees associated with the cost of collection of same shall be deemed a lien on the property so assessed.
+            By accepting ownership of property within Cobblestone Subdivision, each owner acknowledge said property is now or will be subject to periodic assessments to be established and used for the construction development, improvement, repair and replacement of the entryways, detention ponds and surrounding areas, and common areas and improvements by the Board of Directors of the Cobblestone Subdivision Property Owner's Association and agrees if said assessments are not timely and fully paid said assessment and all costs, including legal fees associated with the cost of collection of same shall be deemed a lien on the property so assessed.
 
-            The owner(s) of each lot in Cobblestone Subdivision Phase III shall be entitled to one(1)	vote on any proposition or action placed before the membership of the Cobblestone Subdivision Property Owner's Association for a vote. If more than one person or entity owns a single lot, the owners must collectively agree upon their single vote before casting same. If one or more entities own more than one lot, the owner(s) are entitled to one (1) vote per lot owned.`,
+            The owner(s) of each lot in Cobblestone Subdivision shall be entitled to one(1)	vote on any proposition or action placed before the membership of the Cobblestone Subdivision Property Owner's Association for a vote. If more than one person or entity owns a single lot, the owners must collectively agree upon their single vote before casting same. If one or more entities own more than one lot, the owner(s) are entitled to one (1) vote per lot owned.`,
             isVisible: true,
           },
           {
             sectionTitle: "32. ARCHITECTURAL COMMITTEE:",
-            sectionBody: `The Architectural Committee is established to insure, within its limited ability, that all dwellings and/or other exterior structures within Cobblestone Subdivision Phase III are compatible with the other dwelling and structures constructed or to be constructed within Cobblestone Subdivision Phase III.
+            sectionBody: `The Architectural Committee is established to insure, within its limited ability, that all dwellings and/or other exterior structures within Cobblestone Subdivision are compatible with the other dwelling and structures constructed or to be constructed within Cobblestone Subdivision.
             
-            The Architectural Committee for all new construction shall consist of three (3) builders, appointed by the Cobblestone Subdivision Developer and owning lots in Cobblestone Subdivision Phase III. At such time when each of the three builders has sold all owned lot and homes in Cobblestone Subdivision Phase III that position on the Architectural Committee will then be appointed by the Cobblestone Subdivision Property Owner's Association.
+            The Architectural Committee for all new construction shall consist of three (3) builders, appointed by the Cobblestone Subdivision Developer and owning lots in Cobblestone Subdivision. At such time when each of the three builders has sold all owned lot and homes in Cobblestone Subdivision that position on the Architectural Committee will then be appointed by the Cobblestone Subdivision Property Owner's Association.
             
-            The Architectural Committee shall be appointed and shall serve at the discretion of the Board of Directors of the Cobblestone Subdivision Property Owners Association. The Architectural Committee shall have no less than one (1) member and shall have no more than three (3) members who shall own or be representatives of the owners of property within Cobblestone Subdivision Phase III.`,
+            The Architectural Committee shall be appointed and shall serve at the discretion of the Board of Directors of the Cobblestone Subdivision Property Owners Association. The Architectural Committee shall have no less than one (1) member and shall have no more than three (3) members who shall own or be representatives of the owners of property within Cobblestone Subdivision.`,
             isVisible: true,
           },
           {
@@ -517,7 +517,7 @@ module.exports = {
             sectionBody: `The Grounds Committee is established to insure the streets' sidewalks, common areas and improvements located thereupon, unimproved lots and the front and side yards of improved lots, are maintained; groomed and kept in good order. The Grounds Committee shall note any problems with mailboxes, entryways, retention ponds and areas surrounding same, public areas and parks, common areas and improvements within the Cobblestone Subdivision. Any problems or violations noted by the committee shall be written up and reported for repair or correction to the proper parties. If the needed repair or violation is directed to a lot/home owner, said owner has fifteen
             (15) days in which to correct the problem. If the owner fails to take measures to correct the problem, the Grounds Committee may report the violation or prob]em to the Board of Directors of Cobblestone Subdivision Property Owner's Association for further action and follow-up.
 
-            The Grounds Committee shall be appointed and serve at the discretion of the Board of directors of the Cobblestone Subdivision Property Owner's Association. The Grounds Committee shall consist of no less than one (1) member and shall have no more than three (3) members, who will be owners or representatives of owners of property within Cobblestone Subdivision Phase III.`,
+            The Grounds Committee shall be appointed and serve at the discretion of the Board of directors of the Cobblestone Subdivision Property Owner's Association. The Grounds Committee shall consist of no less than one (1) member and shall have no more than three (3) members, who will be owners or representatives of owners of property within Cobblestone Subdivision.`,
             isVisible: true,
           },
           {
@@ -529,7 +529,7 @@ module.exports = {
           },
           {
             sectionTitle: "35. ASSESSMENTS:",
-            sectionBody: `Lots owned by Riverwood Homes, LLC and/or its assigns, shall not be assessed an annual assessment fee as long as the lot remains an undeveloped lot. Once title of a lot is transferred from Riverwood Homes, LLC and/or its assigns, there will be due and annual assessment of one hundred dollars ($100.00), which assessment shall be for a full calendar year. Initial assessments to parties other than as listed above shall be at closing of lot purchase. Assessments will be due January 1st of each year. For any lot purchased in mid-year the lot owner at closing shall be assessed and pay the annual assessment prorated for the remainder of that year. Assessments shall be collected by and paid to the Cobblestone Subdivision Property Owner's Association. Assessments shall be used for the repair, maintenance, upkeep, and replacement of the entryways, detention ponds and surrounding areas, common areas and improvements, public areas and parks, golf course and to pay the costs associated with the operations of the Cobblestone Subdivision Property Owner's Association, including costs and fees paid to lawyers and accountants. By a two thirds (2/3) vote of the Board of Directors of Cobblestone Subdivision Property Owner's Association, or a majority vote of the owners of lots in Cobblestone Subdivision Property Owner's Association, the assessment may be periodically increased or decreased. By acceptance of ownership of a lot within Cobblestone Subdivision Phase III, a lot owner is agreeing to pay current and future assessments and is agreeing assessments shall be deemed a lien against the lot. The lot owner agrees a lien which results from a failure to pay an assessment may be foreclosed in the same manner provided by Arkansas Law for the foreclosure of a real estate mortgage. Each lot owner agrees to pay Cobblestone Subdivision Property Owner's Association costs and legal fees associated with the collection of delinquent assessments of foreclosure of liens.`,
+            sectionBody: `Lots owned by Riverwood Homes, LLC and/or its assigns, shall not be assessed an annual assessment fee as long as the lot remains an undeveloped lot. Once title of a lot is transferred from Riverwood Homes, LLC and/or its assigns, there will be due and annual assessment of one hundred dollars ($100.00), which assessment shall be for a full calendar year. Initial assessments to parties other than as listed above shall be at closing of lot purchase. Assessments will be due January 1st of each year. For any lot purchased in mid-year the lot owner at closing shall be assessed and pay the annual assessment prorated for the remainder of that year. Assessments shall be collected by and paid to the Cobblestone Subdivision Property Owner's Association. Assessments shall be used for the repair, maintenance, upkeep, and replacement of the entryways, detention ponds and surrounding areas, common areas and improvements, public areas and parks, golf course and to pay the costs associated with the operations of the Cobblestone Subdivision Property Owner's Association, including costs and fees paid to lawyers and accountants. By a two thirds (2/3) vote of the Board of Directors of Cobblestone Subdivision Property Owner's Association, or a majority vote of the owners of lots in Cobblestone Subdivision Property Owner's Association, the assessment may be periodically increased or decreased. By acceptance of ownership of a lot within Cobblestone Subdivision, a lot owner is agreeing to pay current and future assessments and is agreeing assessments shall be deemed a lien against the lot. The lot owner agrees a lien which results from a failure to pay an assessment may be foreclosed in the same manner provided by Arkansas Law for the foreclosure of a real estate mortgage. Each lot owner agrees to pay Cobblestone Subdivision Property Owner's Association costs and legal fees associated with the collection of delinquent assessments of foreclosure of liens.`,
             isVisible: true,
           },
           {
@@ -541,7 +541,7 @@ module.exports = {
           },
           {
             sectionTitle: "37.	BINDING EFFECTS AND AMENDMENTS OF COVENANTS:",
-            sectionBody: `All natural persons or other legal entities, who shall acquire any lot within the Cobblestone Subdivision Phase III subdivision shall be deemed to agree, accept, conform to and observe the restrictions, covenants and stipulations contained herein, and the By Laws of Cobblestone Subdivision Property Owner's Association and accepts membership in the Cobblestone Subdivision Property Owner's Association.
+            sectionBody: `All natural persons or other legal entities, who shall acquire any lot within the Cobblestone Subdivision subdivision shall be deemed to agree, accept, conform to and observe the restrictions, covenants and stipulations contained herein, and the By Laws of Cobblestone Subdivision Property Owner's Association and accepts membership in the Cobblestone Subdivision Property Owner's Association.
 
             Any amendment of these covenants and restrictions requires an approval by a vote of seventy-five percent (75%) of the lot/home owners of all phases within Cobblestone Subdivision Property Owner's Association.
             
