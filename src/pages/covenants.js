@@ -91,11 +91,10 @@ const Covenants = () => {
           <p>
             WHEREAS the undersigned, hereinafter referred to a "Declarant" is
             the owner, developer and sub-divider of all the Lots in COBBLESTONE
-            SUBDIVISION, PHASE IV, a residential subdivision to the City of
-            Fayetteville, Arkansas, hereinafter to as "COBBLESTONE SUBDIVISION
-            PHASE IV", by execution hereof, enters and declares the following
+            SUBDIVISION, a residential subdivision to the City of
+            Fayetteville, Arkansas, hereinafter to as "COBBLESTONE SUBDIVISION", by execution hereof, enters and declares the following
             assurances, covenants, and restrictions wih respect to the
-            Subdivision Phase IV.
+            Subdivision.
           </p>
         </Description>
         {searchResults.map(covenant => (
