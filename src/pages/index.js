@@ -107,7 +107,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   align-items: flex-end;
   width: 100%;
   height: 100vh;
-  background-position: center center;
+  background-position: 48% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 `

@@ -5,7 +5,7 @@ const NoResultsWrapper = styled.div`
   min-height: 70vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `
 
 export const NoResults = () => (

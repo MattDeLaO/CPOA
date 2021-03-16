@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/MainLayout"
 import SearchBar from "../components/SearchBar"
-import { NoResults } from "../components/NoResults"
 import styled from "styled-components"
 
 const CovenantHeading = styled.h3`
@@ -11,6 +10,7 @@ const CovenantHeading = styled.h3`
   background: #14293d;
   padding: 5px;
   border-radius: 4px;
+  margin-top: 10px;
 `
 const SectionBody = styled.div`
   margin-top: 15px;
@@ -35,7 +35,9 @@ const Description = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  padding: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   h2 {
     text-align: center;
   }
@@ -65,7 +67,6 @@ const Covenants = () => {
   const Covenants = siteData.site.siteMetadata.strings[0].covenants
   const [searchTerm, setSearchTerm] = useState("")
   const [searchResults, setSearchResults] = useState([])
-  const [isNoResults, updateIsNoResults] = useState(false)
 
   const handleChange = event => {
     setSearchTerm(event.target.value)
@@ -85,18 +86,20 @@ const Covenants = () => {
         handleOnChange={handleChange}
         id="Top"
       />
+
+      <Description>
+        <h2>KNOW ALL BY THESE PRESENTS</h2>
+        <p>
+          WHEREAS the undersigned, hereinafter referred to a "Declarant" is the
+          owner, developer and sub-divider of all the Lots in COBBLESTONE
+          SUBDIVISION, a residential subdivision to the City of Fayetteville,
+          Arkansas, hereinafter to as "COBBLESTONE SUBDIVISION", by execution
+          hereof, enters and declares the following assurances, covenants, and
+          restrictions wih respect to the Subdivision.
+        </p>
+      </Description>
+
       <Content>
-        <Description>
-          <h2>KNOW ALL BY THESE PRESENTS</h2>
-          <p>
-            WHEREAS the undersigned, hereinafter referred to a "Declarant" is
-            the owner, developer and sub-divider of all the Lots in COBBLESTONE
-            SUBDIVISION, a residential subdivision to the City of
-            Fayetteville, Arkansas, hereinafter to as "COBBLESTONE SUBDIVISION", by execution hereof, enters and declares the following
-            assurances, covenants, and restrictions wih respect to the
-            Subdivision.
-          </p>
-        </Description>
         {searchResults.map(covenant => (
           <>
             <CovenantHeading key={`${covenant.sectionTitle} + sectionTitle`}>
@@ -115,7 +118,6 @@ const Covenants = () => {
               ))}
           </>
         ))}
-        {isNoResults && <NoResults />}
       </Content>
     </Layout>
   )
