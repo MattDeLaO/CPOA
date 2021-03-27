@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/MainLayout"
 import SearchBar from "../components/SearchBar"
 import styled from "styled-components"
+import SEO from "../components/seo"
 
 const CovenantHeading = styled.h3`
   color: white;
@@ -80,6 +81,7 @@ const Covenants = () => {
 
   return (
     <Layout>
+      <SEO title="Cobblestone Covenants" />
       <SearchBar
         placeHolderText={"Search Covenants"}
         value={setSearchTerm}

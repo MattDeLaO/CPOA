@@ -3,6 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import { motion } from "framer-motion"
+import SEO from "../components/seo"
 
 const HomeBanner = styled(motion.div)`
   width: 100%;
@@ -80,6 +81,7 @@ const BackgroundSection = ({ className }) => {
       fluid={imageData}
       backgroundColor={`#040e18`}
     >
+      <SEO title="Home" />
       <HomeBanner
         animate={{ y: 0 }}
         initial={{ y: "-100%" }}

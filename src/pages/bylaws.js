@@ -4,6 +4,7 @@ import Layout from "../components/MainLayout"
 import styled from "styled-components"
 import { NoResults } from "../components/NoResults"
 import SearchBar from "../components/SearchBar"
+import SEO from "../components/seo"
 
 const Heading = styled.h3`
   color: white;
@@ -70,13 +71,14 @@ const Bylaws = () => {
 
   return (
     <Layout>
+      <SEO title="Cobblestone Bylaws" />
       <SearchBar
         placeHolderText={"Search Bylaws"}
         value={searchTerm}
         handleOnChange={handleChange}
         id="Top"
       />
-      <Content >
+      <Content>
         {searchResults.map(bylaw => (
           <>
             <Heading key={`${bylaw.title} + bylaw title`}>

@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { BsArrowLeft } from "react-icons/bs"
+import SEO from "../components/seo"
 
 const SubmitButton = styled.button`
   background: #14293d;
@@ -126,7 +127,7 @@ const Header = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center;lang="en"
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -197,12 +198,14 @@ export default class MyForm extends React.Component {
     const { status } = this.state
     return (
       <>
+        <SEO title="Contact Us" />
         <Header>
           <BackButton to="/">
             <BsArrowLeft size={20} />
           </BackButton>
           Contact Us
         </Header>
+
         <Content>
           <StyledForm
             onSubmit={this.submitForm}
